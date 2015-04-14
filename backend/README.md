@@ -31,9 +31,9 @@ Open up `config_var_example.py` and change the `SQLALCHEMY_DATABASE_URI` to the 
 
 Run the following 3 commands:
 ```
-python migrate.py db init
-python migrate.py db migrate
-python migrate.py db upgrade
+python manage.py db init
+python manage.py db migrate
+python manage.py db upgrade
 ```
 
 Authentication in this API is a password based authentication. Your database will have a Users table where it will save username and a passwordHash. Therefore the first thing you have to do before people start using the API, is to add users to your database. In order to do this open the create_user.py script and edit the following line with the correct credentials:
