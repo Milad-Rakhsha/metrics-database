@@ -12,8 +12,8 @@ git clone git@github.com:felipegb94/ChronoTestAPI.git
 
 Start a virtualenv
 ```
-virtualenv chronoapi
-source chronoapi/bin/activate
+virtualenv metricsAPI
+source metricsAPI/bin/activate
 ```
 
 Install the required packages
