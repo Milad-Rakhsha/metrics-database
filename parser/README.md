@@ -23,7 +23,7 @@ pw: "THE PASSWORD"
 ```
 3. Change the URL variable to the API url. In my case when I run locally this path looks like this:
 ```
-URL = 'http://localhost:5000/chrono_test/api/tests'
+URL = 'http://localhost:5000/metrics/api/tests'
 ```
 4. Finally change RESULTS_PATH in config.py to the path to the folder where all the results json files are saved. In my case this looks like this
 ```
