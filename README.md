@@ -1,4 +1,11 @@
 # metrics-database
 Database for metrics.
 
-In order to setup the metrics-database, clone the repository and follow the README instructions that are in each of the folders (parser, frontend and backend).
+Setup:
+
+Clone the repository
+```
+git clone https://github.com/uwsbel/metrics-database.git
+```
+
+In order to setup the whole metrics-database project, follow the README instructions that are in each of the folders (parser, frontend and backend).
