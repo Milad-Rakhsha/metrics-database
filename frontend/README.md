@@ -13,8 +13,8 @@ cd ChronoTest_Frontend
 ```
 Start a virtualenv
 ```
-virtualenv chronoTestFrontend
-source chronoTestFrontend/bin/activate
+virtualenv MetricsFrontend
+source MetricsFrontend/bin/activate
 ```
 
 Install the required packages
