@@ -1,3 +1,4 @@
+metricsAPI/*
 config_vars.py
 testdb.py
 deleted_code.py
