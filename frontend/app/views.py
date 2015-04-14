@@ -50,12 +50,12 @@ def test(test_name):
     tests = requests.get(url, auth = HTTPBasicAuth(app.config['CURRENT_TOKEN'], ""))
 
     if(tests.status_code == 200):
-        return render_template('test_all.html',
+        return render_template('metrics.html',
             title = title,
             user = "",
             tests = tests.json())
     else:
-        return render_template('test_all.html',
+        return render_template('metrics.html',
             title = "ERROR " + str(tests.status_code))
     
 

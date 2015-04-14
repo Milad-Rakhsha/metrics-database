@@ -20,6 +20,6 @@ passlib
 
 
 flask-restful
-bson
+
 
 flask-httpauth

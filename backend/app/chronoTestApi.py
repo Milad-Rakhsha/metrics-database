@@ -29,7 +29,7 @@ def verify_password(username_or_token, password):
 Once a user has logged in, he is given a key to make future requests for a
 period of time.
 '''
-@app.route('/chrono_test/api/token')
+@app.route('/metrics/api/token')
 @auth.login_required
 def get_auth_token():
     token = g.user.generate_auth_token()
@@ -129,7 +129,7 @@ class TestListAPI(Resource):
 
 
         
-api.add_resource(TestListAPI, '/chrono_test/api/tests', endpoint = 'tests')
+api.add_resource(TestListAPI, '/metrics/api/tests', endpoint = 'tests')
 
 '''
 Resource that allows you to get all test_runs from a specific test through get.
@@ -188,7 +188,7 @@ class TestAPI(Resource):
 
         return tests
         
-api.add_resource(TestAPI, '/chrono_test/api/tests/<string:test_name>', endpoint = 'test')
+api.add_resource(TestAPI, '/metrics/api/tests/<string:test_name>', endpoint = 'test')
 
 '''
 Returns an error when a login fails
