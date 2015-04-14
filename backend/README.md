@@ -5,12 +5,8 @@ API of the testing infrastructure for Chrono
 
 Setup:
 
-Clone the repository
-```
-git clone git@github.com:felipegb94/ChronoTestAPI.git
-```
 
-Start a virtualenv
+Start a virtualenv. Preferably inside the backend directory.
 ```
 virtualenv metricsAPI
 source metricsAPI/bin/activate
