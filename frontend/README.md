@@ -3,15 +3,7 @@ Website for Tests in Chrono.
 
 Setup:
 
-Clone the repository
-```
-git clone https://github.com/felipegb94/ChronoTest_Frontend.git
-```
-Navigate to the cloned repos
-```
-cd ChronoTest_Frontend
-```
-Start a virtualenv
+Start a virtualenv for the frontend. This should preferably be inside the frontend folder.
 ```
 virtualenv MetricsFrontend
 source MetricsFrontend/bin/activate
