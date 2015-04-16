@@ -65,7 +65,8 @@ function plot(metrics, run_names, runs){
 						series: { 0: {color: '#e2431e'},
 								  1: {color: '#1c91c0'},	
 								  2: {color: '#f1ca3a'}	
-								}
+								},
+						pointSize: 3
 					   };
 
 		if(first){
