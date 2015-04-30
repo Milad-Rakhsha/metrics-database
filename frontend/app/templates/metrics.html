@@ -5,8 +5,10 @@
     <script type="text/javascript">
 
         // Set a callback to run when the Google Visualization API is loaded.
+        google.load("visualization", "1.1", {packages: ['annotationchart']});
         google.setOnLoadCallback(drawChart);
         var tests = {{tests|tojson|safe}};
+        console.log(tests);
         var metrics = []; // Array with metric names. Size = Number of plots
         
     </script>
@@ -31,17 +33,59 @@
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">{{ tests.name }}</h1>
-    <ul>
-        {% for t in tests.run_names %}
-        <li> <strong>{{t}} Most Recent Commit</strong> = {{tests.latest_commits[loop.index0]}}</li> 
-        <li> <strong>{{t}} Most Recent Execution Time</strong> = {{tests.current_execution_times[loop.index0]}} </li>
-        <li> <strong>{{t}} Current Status</strong> = {{tests.status[loop.index0]}} </li>
-        </br>
-        {% endfor %}
-    </ul>
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th></th>
+          <th>
+            Most Recent Recorded Value
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for t in tests.run_names %}
+        <tr>
+          <th class="text-nowrap" scope="row">{{t}} Commit</th>
+          <td>{{tests.latest_commits[loop.index0]}}</td>
+        </tr>
+        <tr>
+          <th class="text-nowrap" scope="row">{{t}} Execution Time</th>
+          <td>{{tests.current_execution_times[loop.index0]}}</td>
+        </tr>
+        <tr>
+          <th class="text-nowrap" scope="row">{{t}} Status</th>
+          <td>{{tests.status[loop.index0]}}</td>
+        </tr>
+      {% endfor %}
+
+      </tbody>
+    </table>
 
     <div id="metrics">
+
         <h2 class="sub-header">Metrics</h2>
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th> Metric</th>
+                    <th> Most Recent Recorded Value </th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for t in tests.run_names %}
+                    {% for metric in tests[t][0]['metrics'] %}
+                    <tr>
+                        <th class="text-nowrap" scope="row">{{metric}} </th>
+                        <td>{{tests[t][tests[t]|length - 1]['metrics'][metric]}}</td>
+                    </tr>
+                    {% endfor %}
+
+                {% endfor %}
+
+                </tbody>
+            </table>
+
     </div>
 
 

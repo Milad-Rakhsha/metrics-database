@@ -66,7 +66,10 @@ function plot(metrics, run_names, runs){
 								  1: {color: '#1c91c0'},	
 								  2: {color: '#f1ca3a'}	
 								},
-						pointSize: 3
+						pointSize: 3,
+						explorer: {axis: 'horizontal',
+								   actions: ['dragToZoom','rightClickToReset'],
+								   maxZoomIn: 0}
 					   };
 
 		if(first){
