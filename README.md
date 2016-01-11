@@ -11,7 +11,7 @@ git clone https://github.com/uwsbel/metrics-database.git
 In order to setup the whole metrics-database project, follow the README instructions that are in each of the folders (parser, frontend and backend).
 
 ## Description
-This project was developed to record output metrics (mostly performance) of the tests that are run on the open source multi-physics engine, <a href="http://github.com/" target="_blank">Chrono</a>, and be able to query these metrics and display on a web application. In order to meet this goal I developed five pieces of code that together fully automated the process of tracking these metrics, and a sixth component that will hopefully be implemented in the future. 
+This project was developed to record output metrics (mostly performance) of the tests that are run on the open source multi-physics engine, <a href="https://github.com/projectchrono/chrono" target="_blank">Chrono</a>, and be able to query these metrics and display on a web application. In order to meet this goal I developed five pieces of code that together fully automated the process of tracking these metrics, and a sixth component that will hopefully be implemented in the future. 
                               
 **1. BaseTest:** First I developed a BaseTest class from which all tests that wish to report metrics are derived from. This allowed the test developers to easily report the metrics by just calling a simple function called addMetric(...). The class would then output the metrics in a JSON format.
 
