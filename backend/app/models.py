@@ -147,7 +147,8 @@ class Test_Runs(db.Model):
 			 "timestamp": self.timestamp,
              "passed": self.passed,
              "commit_id": self.commit_id, 
-             "metrics": self.metrics,                 
+             "metrics": self.metrics,
+             "execution_time" : self.execution_time,                 
              "timestamp": str(self.timestamp),
              "id": self.id}
 
