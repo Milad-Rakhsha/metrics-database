@@ -21,7 +21,8 @@ os.chdir(config.RESULTS_PATH)
 for root, dirs, files in os.walk('.'):
 	for jsonFile in files:
 		test = parser_helper.openJSON(jsonFile)
-		json_tests["tests"].append(test) 
+		json_tests["tests"].append(test)
+		os.unlink(os.path.join(root, jsonFile)) 
 
 # Get username and pw for authentication
 json_data = open(config.PATH,'r')
@@ -37,5 +38,5 @@ r = requests.post(url, data=json.dumps(json_tests), headers=headers,
 	auth=HTTPBasicAuth(data['username'], data['pw']))
 
 # Print the status
-print "Request status = " + str(r.status_code)
-print r.text
+print("Request status = " + str(r.status_code))
+print(r.text)

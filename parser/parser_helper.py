@@ -10,7 +10,7 @@ def openJSON(json_filename):
 	try:
 		json_data = open(json_filename, 'r')
 	except IOError:
-		print "The file specified does not exist."
+		print("The file specified does not exist.")
 		quit()
 
 	data = json.load(json_data)
